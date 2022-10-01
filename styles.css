@@ -85,7 +85,7 @@ nav
 .col-md-4 .img-fluid
 {
     transition: transform .2s; /* Animation */
-    width: 360px;
+    width: 100%;
     height: 240px;
 }
 
