@@ -23,15 +23,14 @@ function loadDomElements(elementList,shouldClear)
 }
 
 
-function loadDefaults()
+async function loadDefaults()
 {
-    loadDomElements("test|container");
-    loadDomElements("sharedNodes/navBar|body");
-    loadDomElements("sharedNodes/mainBannerLogo|body");
-    loadDomElements("sharedNodes/container|body");
-    loadDomElements("mainPageElements/whatIsSBWiki|container");
-    loadDomElements("mainPageElements/featuredCarousel|container");
-    loadDomElements("mainPageElements/allGuides|container");
+    await loadDomElements("sharedNodes/navBar|body");
+    await loadDomElements("sharedNodes/mainBannerLogo|body");
+    await loadDomElements("sharedNodes/container|body");
+    await loadDomElements("mainPageElements/whatIsSBWiki|container");
+    await loadDomElements("mainPageElements/featuredCarousel|container");
+    await loadDomElements("mainPageElements/allGuides|container");
 
-    loadDomElements("sharedNodes/footer|body");
+    await loadDomElements("sharedNodes/footer|body");
 }

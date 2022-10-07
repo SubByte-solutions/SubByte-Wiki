@@ -1,4 +1,148 @@
 <div class="row container-element">
     <h3 class="subbyte-section">Guides List</h3>
-    <p>In this grid you will find all of our guides. Each of them have badges. Each badge has its meaning. Hover over there examples to know what each of them means.</p>
+    <p>In this grid you will find all of our guides. Each of them has a badge. Each badge has its meaning. Hover over them to see what they mean.</p>
+
+    <div class = "guidesList">
+        <aside class = "guideListAside">
+            <ul class="glAsideUL">
+                <li id="serverStatus">
+                    <p>Server Status</p>
+                    <p>subbyte.plox.vip:25546</p> 
+                    <button type="button" class="btn btn-success">Online</button>
+                </li>
+                <li id="subsList">
+                    <p>Subscribers</p>
+                    <i class="fas fa-user"> Project_Ra </i>
+                    <i class="fas fa-user"> UR_Next </i>
+                    <i class="fas fa-user"> Nerox </i>
+                    <i class="fas fa-user"> Error </i>
+                    <i class="fas fa-user"> Pulsetopia </i>
+                    <i class="fas fa-user"> Sam_Sandwich </i>
+                    <i class="fas fa-user"> Frimb0__ </i>
+                    <i class="fas fa-user"> Cyndrical </i>
+                </li>
+            </ul>
+        </aside>
+        <main id = "guideListMain">
+            <table id="guidesListTable">
+                <tr id = "glfirtRow">
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="guideTableImage" src="../../Images/guideTN/howToMemberTN.jpg" alt="">
+                        <aside class="glDescAside">
+                            <div class="glDescHeader">
+                                <p class="glDescHeaderP">What are members and how to become one.</p>                                
+                                <ul>
+                                    <i class="fa-solid fa-certificate i-disabled" title="Required for Rank-UP to [Player]"></i>
+                                    <i class="fa-solid fa-star i-disabled" title="New Guide"></i>
+                                    <i class="fa-solid fa-circle-exclamation" title="Important"></i>
+                                    <i class="fa-solid fa-shield-heart i-disabled" title="For Advanced Players"></i>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class = "guideListDescriptor">↳ In this guide you will get detailed info about what members have as perks and how to become one of them!</p>
+                            </div>
+                        </aside>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="guideTableImage" src="data:image/png;base64,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" alt="">
+                        <aside class="glDescAside">
+                            <div class="glDescHeader">
+                                <p class="glDescHeaderP">How base protection works?</p>                                
+                                <ul>
+                                    <i class="fa-solid fa-certificate" title="Required for Rank-UP to [Player]"></i>
+                                    <i class="fa-solid fa-star" title="New Guide"></i>
+                                    <i class="fa-solid fa-circle-exclamation" title="Important"></i>
+                                    <i class="fa-solid fa-shield-heart i-disabled" title="For Advanced Players"></i>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class = "guideListDescriptor">↳ You need to protect your base from thieves. Learn how here:</p>
+                            </div>
+                        </aside>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="guideTableImage" src="https://st2.depositphotos.com/1526816/6541/v/600/depositphotos_65413397-stock-illustration-bakery-shop.jpg" alt="">
+                        <aside class="glDescAside">
+                            <div class="glDescHeader">
+                                <p class="glDescHeaderP">How to use the SubByte store?</p>                                
+                                <ul>
+                                    <i class="fa-solid fa-certificate i-disabled" title="Required for Rank-UP to [Player]"></i>
+                                    <i class="fa-solid fa-star" title="New Guide"></i>
+                                    <i class="fa-solid fa-circle-exclamation" title="Important"></i>
+                                    <i class="fa-solid fa-shield-heart i-disabled" title="For Advanced Players"></i>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class = "guideListDescriptor">↳ SubByte uses Tebex for monetization. Learn how to navigate trough it!</p>
+                            </div>
+                        </aside>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="guideTableImage" src="https://t4.ftcdn.net/jpg/03/09/91/13/360_F_309911343_IggW8l4tRFNoG6dMrL1wTxVDWRjCust2.jpg" alt="">
+                        <aside class="glDescAside">
+                            <div class="glDescHeader">
+                                <p class="glDescHeaderP">Intro to SB Seasons</p>                                
+                                <ul>
+                                    <i class="fa-solid fa-certificate" title="Required for Rank-UP to [Player]"></i>
+                                    <i class="fa-solid fa-star" title="New Guide"></i>
+                                    <i class="fa-solid fa-circle-exclamation" title="Important"></i>
+                                    <i class="fa-solid fa-shield-heart i-disabled" title="For Advanced Players"></i>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class = "guideListDescriptor">↳ A big feature of SB survival is the seasons. Learn more about the mechanics they introduce.</p>
+                            </div>
+                        </aside>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="guideTableImage" src="https://i.etsystatic.com/13014677/r/il/d81984/2264237048/il_570xN.2264237048_o03v.jpg" alt="">
+                        <aside class="glDescAside">
+                            <div class="glDescHeader">
+                                <p class="glDescHeaderP">How to become a Helper/Builder/Mod</p>                                
+                                <ul>
+                                    <i class="fa-solid fa-certificate i-disabled" title="Required for Rank-UP to [Player]"></i>
+                                    <i class="fa-solid fa-star" title="New Guide"></i>
+                                    <i class="fa-solid fa-circle-exclamation" title="Important"></i>
+                                    <i class="fa-solid fa-shield-heart" title="For Advanced Players"></i>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class = "guideListDescriptor">↳ SubByte is in need of staff members. Check the guide and requirements for the positions.</p>
+                            </div>
+                        </aside>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="guideTableImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPytqwB0ZXdlg3eKOerOsQHkjd4VP6pawjVA&usqp=CAU" alt="">
+                        <aside class="glDescAside">
+                            <div class="glDescHeader">
+                                <p class="glDescHeaderP">What minigames does SB have?</p>                                
+                                <ul>
+                                    <i class="fa-solid fa-certificate i-disabled" title="Required for Rank-UP to [Player]"></i>
+                                    <i class="fa-solid fa-star" title="New Guide"></i>
+                                    <i class="fa-solid fa-circle-exclamation" title="Important"></i>
+                                    <i class="fa-solid fa-shield-heart i-disabled" title="For Advanced Players"></i>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class = "guideListDescriptor">↳ SubByte provides its players with a few interesting gamemodes. All of them are descriebed here...</p>
+                            </div>
+                        </aside>
+                    </td>
+                </tr>
+            </table>
+        </main>
+    </div>
 </div>

@@ -94,3 +94,178 @@ nav
     transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     cursor: pointer;
 }
+
+.guidesList
+{
+    background: rgb(237, 237, 237);
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+    width: 100%;
+    padding-right: 0;
+    overflow: auto;
+
+    border-radius: 10px;
+    filter: drop-shadow(3px 3.5px 0px #039999);
+}
+
+.guideListAside 
+{
+    width: 20%;
+    float: right;
+    font-style: italic;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.glAsideUL
+{
+    height: 100%;
+    list-style: none;
+    margin:0;
+    padding: 0;
+    overflow: auto;
+}
+
+.glAsideUL li
+{
+    height: 15vh;
+    align-self: center;
+    margin: 20% 15px 0px 15px;
+    border-radius: 10px;;
+    border: 3px solid rgb(200, 198, 198);
+    background-color: white;
+    max-width: 230px;
+    padding-top: 10px;
+    line-height: 0.3;
+}
+
+.fa-user
+{
+    margin-bottom: 8px;
+    display: block;
+}
+
+#subsList
+{overflow: auto;}
+
+#guidesListTable
+{
+    width: 100%;
+    height: 100%;
+    border-collapse:separate;
+    border-spacing:5px 15px;
+}
+
+#glfirtRow
+{display: none;}
+
+
+#guideListMain
+{
+    display: flex;
+    width: 78%;
+    margin: 1% 1% 1% 0%;
+    padding: 5px;
+    background: white;
+    border-radius: 10px;;
+
+}
+
+.guideTableImage
+{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 10px;
+    filter: drop-shadow(-4px 2px 0px #039999);
+    cursor: pointer;
+}
+
+#guidesListTable td
+{display: flex;}
+
+#guidesListTable img:hover
+{
+    position: relative;
+    filter: drop-shadow(-4px 2px 0px white);
+    right:4px;
+    top:2px;
+}
+
+.fa-star
+{color: rgb(243, 161, 10);}
+
+.fa-certificate
+{color: #019b22;}
+
+.fa-circle-exclamation
+{color: firebrick;}
+
+.fa-shield-heart
+{color: rgb(74, 0, 172);}
+
+.i-disabled
+{color: rgb(150, 150, 150);}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext 
+{
+  visibility: visible;
+}
+
+.glDescAside
+{
+    padding-left: 10px;
+    width: 100%;
+}
+
+.glDescHeaderP
+{
+    float: left;
+    font-weight: 980;
+    font-size: 120%;
+    margin: 0;
+}
+
+.glDescHeader
+{
+    width: 100%;
+    height: 37%;
+    display: block;
+    box-shadow: 0px 5px 0px -1px rgb(207 205 205);
+    border-radius: 3px;
+}
+
+.glDescHeader ul
+{   
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.guideListDescriptor
+{
+    font-size: 90%;
+    width: 100%;
+    padding: 0 0 0 15px;
+    display: inline-block;
+}
