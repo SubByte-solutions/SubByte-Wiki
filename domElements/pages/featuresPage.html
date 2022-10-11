@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="/styles/features.css">
+<h3 class="subbyte-section">Feature Tabs</h3>
+<div class="slider-container">
+    <div class="slide-box">
+      <img src="https://img.freepik.com/free-vector/team-tiny-cartoon-company-people-with-balanced-scorecard-business-boost-progress-up-arrow-office-persons-with-plan-aim-flat-vector-illustration-teamwork-success-achievement-concept_74855-22560.jpg?w=2000" class="image" alt="">
+      <div class="content">
+        <h2>Enhancements</h2>
+        <p>The Survival world focuses on the "Enchanced Vanilla" genre. We've prepared a LOT of vanilla improvements for our players.</p>
+        <button>Learn More</button>
+      </div>
+    </div>
+    <div class="slide-box">
+      <img src="https://c4.wallpaperflare.com/wallpaper/737/190/347/istanbul-city-sultanahmet-mosque-turkey-wallpaper-preview.jpg" class="image" alt="">
+      <div class="content">
+        <h2>Mobs</h2>
+        <p>To make the world more lively, we've added more mobs to the wild. A complete list of them you can find by clicking the button.</p>
+        <button>Learn More</button>
+      </div>
+    </div>
+    <div class="slide-box active">
+      <img src="https://c4.wallpaperflare.com/wallpaper/327/532/992/nature-norway-tilt-shift-digital-art-wallpaper-preview.jpg" class="image" alt="">
+      <div class="content">
+        <h2>Ranks</h2>
+        <p>SubByte offers a number of free ranksm each comming with its set of perks. Aside from them you can also try out our premium offers.</p>
+        <button>All Ranks</button>
+      </div>
+    </div>
+    <div class="slide-box">
+      <img src="https://c1.wallpaperflare.com/preview/914/450/462/great-wall-china-great-chinese.jpg" class="image" alt="">
+      <div class="content">
+        <h2>Minigames</h2>
+        <p>We want to give our players a way to chill from the constant dangers of Survival. Thats why SB includes the following minigames...</p>
+        <button>Minigames</button>
+      </div>
+    </div>
+    <div class="slide-box">
+      <img src="https://c4.wallpaperflare.com/wallpaper/211/1016/1022/kasbah-ruins-sand-morocco-wallpaper-preview.jpg" class="image" alt="">
+      <div class="content">
+        <h2>Cross-Platform</h2>
+        <p>The SB team wants this server to be a safe haven for all MC players. Thats why they have made it work for all platforms.</p>
+        <button>Supported devices</button>
+      </div>
+    </div>
+    <div class="slide-box">
+      <img src="https://c4.wallpaperflare.com/wallpaper/211/1016/1022/kasbah-ruins-sand-morocco-wallpaper-preview.jpg" class="image" alt="">
+      <div class="content">
+        <h2>Responcibility</h2>
+        <p>Nobody likes to be left alone. To the rescue comes SB's tech support. There are systems in place that help player with acc, passwords and any questions.</p>
+        <button>Tech Support</button>
+      </div>
+    </div>
+    <div class="slide-box">
+      <img src="https://c4.wallpaperflare.com/wallpaper/211/1016/1022/kasbah-ruins-sand-morocco-wallpaper-preview.jpg" class="image" alt="">
+      <div class="content">
+        <h2>Updates</h2>
+        <p>The team behind is always listening to the community for feedback. Anyone can influence the direction of the server.</p>
+        <button>Feedback</button>
+      </div>
+    </div>
+    <div class="slide-box">
+      <img src="https://c4.wallpaperflare.com/wallpaper/211/1016/1022/kasbah-ruins-sand-morocco-wallpaper-preview.jpg" class="image" alt="">
+      <div class="content">
+        <h2>Protection</h2>
+        <p>The server is equipped with more than a few world protection plugins, giving it's player the garantee of peace against greefers.</p>
+        <button>Learn More</button>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="subbyte-section separated">Features List</h3>
+
+  <script>
+    const slidesElm = document.querySelectorAll(".slider-container .slide-box");
+
+    Array.from(slidesElm).forEach((slide) => {
+    slide.addEventListener("click", () => {
+        Array.from(slidesElm).forEach((sld) => sld.classList.remove("active"));
+        slide.classList.add("active");
+    });
+    });
+
+    function resizeIframe(iframe) 
+    {
+      iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    }
+  </script>

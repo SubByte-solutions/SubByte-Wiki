@@ -1,36 +1,73 @@
-function loadDomElements(elementList,shouldClear)
+export default function loadDomElements(elementList)
 {
-    if(!shouldClear){shouldClear=false;}
-    let elementListArr = elementList.split(',');
-
-    elementListArr.forEach(element => 
+    elementList.forEach(obj=>
     {
-        let [domElement,parent] = element.split('|');
+        fetch(`./domElements/${obj.path}.html`)
+            .then(response=> response.text())
+            .then
+            (input=>
+            {
+                let rootElement = document.getElementById(obj.root)
+                if(!rootElement){return;}
 
-        fetch(`./domElements/${domElement}.html`)
-        .then(response=> response.text())
-        .then
-        (text=>{
-            let rootElement = document.getElementById(parent)
-            if(!rootElement){return;}
+                if(obj.clean)
+                    {rootElement.innerHTML = ""}
 
-            if(shouldClear)
-            {document.getElementById(parent).innerHTML = text}
-            else
-            {document.getElementById(parent).innerHTML += text}
-        });
-    });
+                if(!document.getElementById(obj.id) || !obj.id)
+                {rootElement.innerHTML += input}
+            });
+    })
 }
 
+function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
 
-async function loadDefaults()
+export function loadIframe(obj)
 {
-    await loadDomElements("sharedNodes/navBar|body");
-    await loadDomElements("sharedNodes/mainBannerLogo|body");
-    await loadDomElements("sharedNodes/container|body");
-    await loadDomElements("mainPageElements/whatIsSBWiki|container");
-    await loadDomElements("mainPageElements/featuredCarousel|container");
-    await loadDomElements("mainPageElements/allGuides|container");
+    fetch(`./domElements/${obj.path}.html`)
+            .then(response=> response.text())
+            .then
+            (input=>
+            {
+                let rootElement = document.getElementById(obj.root)
+                if(!rootElement){return;}
 
-    await loadDomElements("sharedNodes/footer|body");
+                if(obj.clean)
+                {rootElement.innerHTML = ""}
+
+                let div = document.createElement("div");
+                div.classList.add("frameWrapper");
+
+                let frame = document.createElement("iframe");
+                frame.setAttribute("src",`./domElements/${obj.path}.html`)
+                frame.setAttribute("frameboarder","0");
+                frame.setAttribute("scrolling","no");
+
+                div.appendChild(frame);
+                rootElement.appendChild(div);
+            });
 }
+
+export async function updateContainerHeader(input)
+{    
+    let header = document.querySelector("#container h1");
+    while(!header)
+    {
+        await sleep(200);
+        header = document.querySelector("#container h1");
+    }
+    header.innerText = input;
+}
+
+export async function addSectionHeadder(input)
+{    
+    let header = document.querySelector("#container h1");
+    while(!header)
+    {
+        await sleep(200);
+        header = document.querySelector("#container h1");
+    }
+    header.innerText = input;
+}
+
+export function cleanNode(selector)
+{document.querySelector(selector).innerHTML="";}
